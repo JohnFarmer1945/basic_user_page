@@ -1,0 +1,43 @@
+{% load static %}
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <a href="{% url 'briefing_page' %}" class="navbar-brand p-1">
+    <img src="{% static 'briefing/img/logo.png' %}" height="20" />
+  </a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarText"
+    aria-controls="navbarText"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div
+    class="collapse navbar-collapse bg-white text-center m-1"
+    id="navbarText"
+  >
+    <div class="navbar-nav p-1">
+      {% if user.is_authenticated %}
+      <a href="{% url 'profile' %}" class="btn btn-grey border m-1">Profile</a>
+      <a href="{% url 'logout' %}" class="btn btn-grey border m-1"
+        >LogOut User</a
+      >
+      {% else %}
+      <a href="{% url 'login' %}" class="btn btn-grey border m-1">LogIn User</a>
+      <a href="{% url 'register' %}" class="btn btn-grey border m-1"
+        >Register New User</a
+      >
+      {% endif %}
+      <a href="{% url 'admin:index' %}" class="btn btn-grey border m-1"
+        >Admin LogIn</a
+      >
+      <a href="{% url 'briefing_page' %}" class="btn btn-grey border m-1"
+        >Home</a
+      >
+    </div>
+  </div>
+</nav>

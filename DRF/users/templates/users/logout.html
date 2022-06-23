@@ -1,0 +1,11 @@
+{% extends 'briefing/main_template.html' %}
+<!---->
+{% load static %}
+<!---->
+
+{% block main_content %}
+<h2>You have been logged out.</h2>
+
+<div>Log in again?<a href="{% url  'login'  %}">Log in again</a></div>
+
+{% endblock main_content %}
