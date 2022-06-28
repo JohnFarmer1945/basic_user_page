@@ -147,7 +147,7 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
-LOGIN_REDIRECT_URL = 'profile'
+LOGIN_REDIRECT_URL = 'briefing_page'
 LOGIN_URL = 'login'
 
 #LOGOUT_REDIRECT_URL = 'briefing_page'
